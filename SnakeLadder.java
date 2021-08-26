@@ -1,6 +1,7 @@
 package com.SnakeLadder;
 
 public class SnakeLadder {
+	 public static  int count = 0 ;
 	public static  void main(String[] args) {
 		
 		        int store = 0;
@@ -16,13 +17,14 @@ public class SnakeLadder {
 		            }
 		            if (store < 89 && store > 11) {
 		                switch (luck()) {
-		                    case 1 -> {
+					case 1 : {
 		                        store += roll;
 		                        System.out.println("Player1 got a ladder is now at : " + store);
 		                    }
-		                    case 2 -> {
+					case 2 : {
 		                        store -= 2 * roll;
 		                        System.out.println("Player1 got a snake is now at : " + store);
+						break;
 		                    }
 		                }
 		            }
@@ -36,13 +38,15 @@ public class SnakeLadder {
 		            }
 		            if (store1 < 89 && store1 > 11) {
 		                switch (luck()) {
-		                    case 1 -> {
+					case 1 : {
 		                        store1 += roll2;
 		                        System.out.println("Player2 got a ladder is now at : " + store1);
+						break;
 		                    }
-		                    case 2 -> {
+					case 2 : {
 		                        store1 -= 2 * roll2;
 		                        System.out.println("Player2 got a snake is now at : " + store1);
+					
 		                    }
 		                }
 		            }
